@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socratic Questioning App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            padding: 50px;
+        }
+        .emoji {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+        #question {
+            font-size: 20px;
+            margin: 20px 0;
+        }
+        #response {
+            margin: 20px 0;
+            font-size: 18px;
+            padding: 10px;
+            width: 50%;
+        }
+        #buttons {
+            margin: 20px 0;
+        }
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="emoji" id="emoji">😊</div>
+    <h1>Welcome to the Socratic Questioning App!</h1>
+    <div id="question">Socratic Question: What would you tell a friend in this situation?</div>
+    <input type="text" id="response" placeholder="Your response">
+    <div id="buttons">
+        <button onclick="askAnotherQuestion()">Submit</button>
+        <button onclick="endApp()">Exit</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
