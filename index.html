@@ -18,15 +18,18 @@
         #question {
             font-size: 20px;
             margin: 20px 0;
+            display: none;
         }
         #response {
             margin: 20px 0;
             font-size: 18px;
             padding: 10px;
             width: 50%;
+            display: none;
         }
         #buttons {
             margin: 20px 0;
+            display: none;
         }
         button {
             font-size: 18px;
@@ -39,6 +42,8 @@
 <body>
     <div class="emoji" id="emoji">😊</div>
     <h1>Welcome to the Socratic Questioning App!</h1>
+    <p id="welcome-message">Stop, pause, and ask yourself.</p>
+    <button id="start-button" onclick="startApp()">Start</button>
     <div id="question">Socratic Question: What would you tell a friend in this situation?</div>
     <input type="text" id="response" placeholder="Your response">
     <div id="buttons">
@@ -48,3 +53,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
