@@ -52,7 +52,7 @@ const questions = [
     "What are the long-term effects of holding this belief?"
 ];
 
-const emojis = ["😊", "😃", "😉", "🤔", "😌", "🤗", "👋"];
+const emojis = ["😊", "😃", "😉", "🤔", "😌", "🤗", "👋", "😃", "😊", "🤔", "😌", "🤗", "👋", "😃", "😊", "🤔", "😌", "🤗", "👋", "😃", "😊", "🤔", "😌", "🤗", "👋", "😃", "😊", "🤔", "😌", "🤗", "👋", "😃", "😊", "🤔", "😌", "🤗", "👋", "😃", "😊", "🤔", "😌", "🤗", "👋"];
 
 let currentQuestionIndex = 0;
 let userResponses = [];
@@ -66,7 +66,7 @@ document.getElementById('start-button').addEventListener('click', function() {
 
 function askQuestion() {
     const question = questions[currentQuestionIndex];
-    const emoji = emojis[currentQuestionIndex];
+    const emoji = emojis[currentQuestionIndex % emojis.length]; // use modulus to cycle through emojis
     document.getElementById('question').innerHTML = question;
     document.getElementById('emoji').innerHTML = emoji;
     document.getElementById('response').value = '';
@@ -81,7 +81,7 @@ document.getElementById('submit-button').addEventListener('click', function() {
         askQuestion();
     } else {
         console.log('No more questions!');
-        // TO DO: implement logic to display results or final message
+        displayResults();
     }
 });
 
@@ -91,6 +91,16 @@ document.getElementById('next-button').addEventListener('click', function() {
         askQuestion();
     } else {
         console.log('No more questions!');
-        // TO DO: implement logic to display results or final message
+        displayResults();
     }
 });
+
+function displayResults() {
+    console.log('Displaying results!');
+    document.getElementById('question-container').style.display = 'none';
+    document.getElementById('results-container').style.display = 'block';
+    const resultsHtml = userResponses.map((response, index) => {
+        return `<p>Question ${index + 1}: ${questions[index]}</p><p>Response: ${response}</p>`;
+    }).join('');
+    document.getElementById('results').innerHTML = resultsHtml;
+}
