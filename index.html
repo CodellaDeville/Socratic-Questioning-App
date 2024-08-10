@@ -8,7 +8,7 @@
 </head>
 <body>
     <div id="welcome-message">
-        <h1>Welcome to the Socratic Questioning App!</h1>
+        <h1 style="color: #03A9F4;">Welcome to the Socratic Questioning App!</h1>
         <p>This app is designed to help you challenge your thoughts and emotions in moments of anxiety, anger, or uncertainty. Please take a few minutes to reflect on what's been troubling you lately, and then we'll guide you through a series of questions to help you gain a new perspective.</p>
         <p><strong>If you are in crisis or need immediate help, please contact local emergency services or a crisis hotline in your area.</strong></p>
         <button id="start-button">Start</button>
@@ -20,29 +20,10 @@
         <button id="submit-button">Submit</button>
         <button id="next-button">Next Question</button>
     </div>
-    <script>
-        document.getElementById('start-button').addEventListener('click', function() {
-            console.log('Start button clicked!');
-            document.getElementById('welcome-message').style.display = 'none';
-            document.getElementById('question-container').style.display = 'block';
-            askQuestion();
-        });
-
-        function askQuestion() {
-            // TO DO: implement logic to display a question and emoji
-            document.getElementById('question').innerHTML = 'What is your issue?';
-            document.getElementById('emoji').innerHTML = '💡';
-        }
-
-        document.getElementById('submit-button').addEventListener('click', function() {
-            console.log('Submit button clicked!');
-            // TO DO: implement logic to handle submit button click
-        });
-
-        document.getElementById('next-button').addEventListener('click', function() {
-            console.log('Next button clicked!');
-            // TO DO: implement logic to handle next button click
-        });
-    </script>
+    <div id="results-container" style="display: none;">
+        <h2>Results</h2>
+        <div id="results"></div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
