@@ -1,5 +1,3 @@
-Here is the complete JavaScript code for the Socratic Questioning App:
-JavaScript
 const questions = [
     "What would you tell a friend in this situation?",
     "What evidence supports your thought?",
