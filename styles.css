@@ -44,23 +44,6 @@ body {
     border-radius: 4px;
 }
 
-#submit-button, #next-button {
-    background-color: #03A9F4; /* Blue background color */
-    color: #fff; /* White text color */
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-#submit-button:hover, #next-button:hover {
-    background-color: #007ac1; /* Darker blue background color on hover */
-}
-
-#submit-button:active, #next-button:active {
-    background-color: #005685; /* Darkest blue background color on click */
-}
-
 #start-button {
     background-color: #03A9F4; /* Blue background color */
     color: #fff; /* White text color */
@@ -79,5 +62,50 @@ body {
     background-color: #005685; /* Darkest blue background color on click */
 }
 
+#submit-button, #next-button {
+    background-color: #03A9F4; /* Blue background color */
+    color: #fff; /* White text color */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#submit-button:hover, #next-button:hover {
+    background-color: #007ac1; /* Darker blue background color on hover */
+}
+
+#submit-button:active, #next-button:active {
+    background-color: #005685; /* Darkest blue background color on click */
+}
+
 #exit-button, #exit-button-2, #exit-button-3 {
-    background-color:
+    background-color: #333333;
+    color: #03A9F4;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+#exit-button:hover, #exit-button-2:hover, #exit-button-3:hover {
+    background-color: #444444;
+}
+
+#exit-button:active, #exit-button-2:active, #exit-button-3:active {
+    background-color: #555555;
+}
+
+#results-container {
+    margin-top: 20px;
+    background-color: #1E1E1E;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+#results {
+    font-size: 18px;
+    color: #03A9F4; /* Blue text color */
+    padding: 20px;
+}
