@@ -53,13 +53,30 @@ const questions = [
 
 const emojis = ["😊", "😃", "😉", "🤔", "😌", "🤗", "👋"];
 
+let currentQuestionIndex = 0;
+
 function startApp() {
     document.getElementById('welcome-message').style.display = 'none';
-    document.getElementById('start-button').style.display = 'none';
-    document.getElementById('question').style.display = 'block';
-    document.getElementById('response').style.display = 'block';
-    document.getElementById('buttons').style.display = 'block';
+    document.getElementById('question-container').style.display = 'block';
     askAnotherQuestion();
 }
 
-functi
+function askAnotherQuestion() {
+    const randomIndex = Math.floor(Math.random() * questions.length);
+    currentQuestionIndex = randomIndex;
+    const question = questions[randomIndex];
+    const emoji = emojis[randomIndex];
+    document.getElementById('question').innerHTML = question;
+    document.getElementById('emoji').innerHTML = emoji;
+    document.getElementById('response').value = '';
+}
+
+function submitResponse() {
+    const response = document.getElementById('response').value;
+    console.log(`Response: ${response}`);
+    // You can add logic here to store the response or do something with it
+}
+
+document.getElementById('start-button').addEventListener('click', startApp);
+document.getElementById('submit-button').addEventListener('click', submitResponse);
+document.getElementById('next-button').addEventListener('click', askAnotherQuestion);
