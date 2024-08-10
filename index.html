@@ -4,31 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Socratic Questioning App</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f0f0f0;
-            padding: 50px;
-        }
-        .emoji {
-            font-size: 50px;
-            margin-bottom: 20px;
-        }
-        #question {
-            font-size: 20px;
-            margin: 20px 0;
-            display: none;
-        }
-        #response {
-            margin: 20px 0;
-            font-size: 18px;
-            padding: 10px;
-            width: 50%;
-            display: none;
-        }
-        #buttons {
-            margin: 20px 0;
-            display: none;
-        }
- 
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="welcome-message">
+        <h1>Welcome to the Socratic Questioning App!</h1>
+        <button id="start-button">Start</button>
+    </div>
+    <div id="question-container" style="display: none;">
+        <h2 id="question"></h2>
+        <p id="emoji"></p>
+        <textarea id="response"></textarea>
+        <button id="submit-button">Submit</button>
+        <button id="next-button">Next Question</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
