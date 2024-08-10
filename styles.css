@@ -1,7 +1,9 @@
+/* General styles for dark mode */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: #f0f0f0;
+    background-color: #121212; /* Dark background */
+    color: #E0E0E0; /* Light text */
     padding: 50px;
 }
 
@@ -9,28 +11,16 @@ body {
     margin-bottom: 20px;
 }
 
-#question-container {
-    margin-top: 20px;
-}
-
-#question {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-#emoji {
-    font-size: 30px;
-    margin-bottom: 10px;
-}
-
-#response {
+#user-issue {
     width: 50%;
     height: 100px;
     padding: 10px;
     font-size: 18px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    background-color: #1E1E1E; /* Slightly lighter than the background */
+    color: #E0E0E0;
+    border: 1px solid #333; /* Darker border */
 }
 
-#submit-button, #next-button {
-    margin-bottom: 10px;
-}
+#question-container {
+    margin-top: 20px;
