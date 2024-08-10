@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    padding: 50px;
+}
+
+#welcome-message {
+    margin-bottom: 20px;
+}
+
+#question-container {
+    margin-top: 20px;
+}
+
+#question {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#emoji {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+#response {
+    width: 50%;
+    height: 100px;
+    padding: 10px;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#submit-button, #next-button {
+    margin-bottom: 10px;
+}
