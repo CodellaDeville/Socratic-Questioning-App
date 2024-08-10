@@ -20,6 +20,18 @@
         <button id="submit-button">Submit</button>
         <button id="next-button">Next Question</button>
     </div>
-    <script src="script.js"></script>
+    <script>
+        document.getElementById('start-button').addEventListener('click', function() {
+            document.getElementById('welcome-message').style.display = 'none';
+            document.getElementById('question-container').style.display = 'block';
+            askQuestion();
+        });
+
+        function askQuestion() {
+            // TO DO: implement logic to display a question and emoji
+            document.getElementById('question').innerHTML = 'What is your issue?';
+            document.getElementById('emoji').innerHTML = '💡';
+        }
+    </script>
 </body>
 </html>
