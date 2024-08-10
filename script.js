@@ -55,6 +55,7 @@ const questions = [
 const emojis = ["😊", "😃", "😉", "🤔", "😌", "🤗", "👋"];
 
 let currentQuestionIndex = 0;
+let userResponses = [];
 
 document.getElementById('start-button').addEventListener('click', function() {
     console.log('Start button clicked!');
@@ -64,10 +65,8 @@ document.getElementById('start-button').addEventListener('click', function() {
 });
 
 function askQuestion() {
-    const randomIndex = Math.floor(Math.random() * questions.length);
-    currentQuestionIndex = randomIndex;
-    const question = questions[randomIndex];
-    const emoji = emojis[randomIndex];
+    const question = questions[currentQuestionIndex];
+    const emoji = emojis[currentQuestionIndex];
     document.getElementById('question').innerHTML = question;
     document.getElementById('emoji').innerHTML = emoji;
     document.getElementById('response').value = '';
@@ -76,9 +75,22 @@ function askQuestion() {
 document.getElementById('submit-button').addEventListener('click', function() {
     const response = document.getElementById('response').value;
     console.log(`Response: ${response}`);
-    // TO DO: implement logic to handle user response
+    userResponses.push(response);
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questions.length) {
+        askQuestion();
+    } else {
+        console.log('No more questions!');
+        // TO DO: implement logic to display results or final message
+    }
 });
 
 document.getElementById('next-button').addEventListener('click', function() {
-    askQuestion();
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questions.length) {
+        askQuestion();
+    } else {
+        console.log('No more questions!');
+        // TO DO: implement logic to display results or final message
+    }
 });
