@@ -1,3 +1,4 @@
+// script.js
 const questions = [
     "What would you tell a friend in this situation?",
     "What evidence supports your thought?",
@@ -53,26 +54,31 @@ const questions = [
 
 const emojis = ["😊", "😃", "😉", "🤔", "😌", "🤗", "👋"];
 
-function startApp() {
+let currentQuestionIndex = 0;
+
+document.getElementById('start-button').addEventListener('click', function() {
+    console.log('Start button clicked!');
     document.getElementById('welcome-message').style.display = 'none';
     document.getElementById('question-container').style.display = 'block';
-    askAnotherQuestion();
-}
+    askQuestion();
+});
 
-function askAnotherQuestion() {
+function askQuestion() {
     const randomIndex = Math.floor(Math.random() * questions.length);
+    currentQuestionIndex = randomIndex;
     const question = questions[randomIndex];
-    const emoji = emojis[randomIndex % emojis.length];
+    const emoji = emojis[randomIndex];
     document.getElementById('question').innerHTML = question;
     document.getElementById('emoji').innerHTML = emoji;
     document.getElementById('response').value = '';
 }
 
-function submitResponse() {
+document.getElementById('submit-button').addEventListener('click', function() {
     const response = document.getElementById('response').value;
     console.log(`Response: ${response}`);
-    // Logic to store the response or process it can be added here
-}
+    // TO DO: implement logic to handle user response
+});
 
-document.getElementById('start-button').addEventListener('click', startApp);
-document.getElementById('submit-button').addEventListener('click
+document.getElementById('next-button').addEventListener('click', function() {
+    askQuestion();
+});
