@@ -1,5 +1,35 @@
 const questions = [
-    // ... (questions remain the same)
+    "What would you tell a friend in this situation?",
+    "What evidence supports your thought?",
+    "What evidence contradicts your thought?",
+    "What is an alternative explanation?",
+    "What is the worst that could happen? How could you cope with that?",
+    "What is the best that could happen?",
+    "What is the most likely outcome?",
+    "Why do you think that?",
+    "What assumptions are you making?",
+    "Is there a different perspective?",
+    "What is the root cause of this belief?",
+    "What would change your mind?",
+    "How does this belief serve you?",
+    "What is the counterargument?",
+    "Can you find an example that disproves this thought?",
+    "How would you argue against this belief?",
+    "Is this belief based on emotions or facts?",
+    "What are the consequences of believing this?",
+    "Who might disagree with this belief and why?",
+    "What if the opposite were true?",
+    "How did you come to this conclusion?",
+    "What other explanations could there be?",
+    "What are you afraid of?",
+    "What is the best evidence for and against this belief?",
+    "How would you explain this belief to a child?",
+    "What are the benefits and drawbacks of this belief?",
+    "How does this belief align with your values?",
+    "What would you do if you weren’t afraid?",
+    "What advice would you give someone else with this belief?",
+    "What if you are wrong?",
+    "What would happen if you let go of this belief?"
 ];
 
 const emojis = ["😊", "😃", "😉", "🤔", "😌", "🤗", "👋"];
@@ -47,17 +77,23 @@ document.getElementById('next-button').addEventListener('click', function() {
 
 document.getElementById('exit-button').addEventListener('click', function() {
     console.log('Exit button clicked!');
-    window.close();
+    if (confirm("Are you sure you want to exit?")) {
+        window.location.href = "about:blank";
+    }
 });
 
 document.getElementById('exit-button-2').addEventListener('click', function() {
     console.log('Exit button clicked!');
-    window.close();
+    if (confirm("Are you sure you want to exit?")) {
+        window.location.href = "about:blank";
+    }
 });
 
 document.getElementById('exit-button-3').addEventListener('click', function() {
     console.log('Exit button clicked!');
-    window.close();
+    if (confirm("Are you sure you want to exit?")) {
+        window.location.href = "about:blank";
+    }
 });
 
 function displayResults() {
@@ -69,3 +105,4 @@ function displayResults() {
     }).join('');
     document.getElementById('results').innerHTML = resultsHtml;
 }
+ 
